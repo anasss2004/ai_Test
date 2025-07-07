@@ -1,5 +1,5 @@
 def main():
-    print("Hello from my-ai-project! new branch")
+    print("Hello world")
     
 
 if __name__ == "__main__":
