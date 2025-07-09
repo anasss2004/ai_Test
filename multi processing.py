@@ -2,13 +2,13 @@ import multiprocessing
 import time
 li=0
 list=[]
-chunksize=1024 * 1024
-def READ(text):
+chunk_size=1024 * 1024
+def read(text):
      #not error handling
      with open(text, 'r') as file:
-        while chunk:= file.read(chunksize):
+        while chunk:= file.read(chunk_size):
             list.append(chunk)
-def Capitale(text):
+def capitale(text):
     global li
     li+=1
     uppertext=text.upper()
@@ -16,7 +16,7 @@ def Capitale(text):
         f.write(uppertext)
 
 def multiprocess_file(text,num):
-    READ(text)
+    read(text)
     for i in range(num):
         print(f"processing with {i+1} processes")
         start=time.perf_counter()
