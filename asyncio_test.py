@@ -7,11 +7,11 @@ li=0
 async def read(text):
      #not error handling
      global li
-     os.makedirs('processed-output asyncio', exist_ok=True)
+     os.makedirs('processed-output_asyncio', exist_ok=True)
      async with aiofiles.open(text, 'r') as file:
         while chunk:=await file.read(chunk_size):
             li+=1
-            async with aiofiles.open(f'processed-output asyncio/{li}processed.txt',"w") as f:
+            async with aiofiles.open(f'processed-output_asyncio/{li}processed.txt',"w") as f:
                 await f.write(chunk.upper())
 if __name__=='__main__':
      print("processing")
