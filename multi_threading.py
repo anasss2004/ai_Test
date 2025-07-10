@@ -13,8 +13,8 @@ def read(text):
 def capitale(args):
     index,text=args
     uppertext=text.upper()
-    os.makedirs('processed-output multi threading', exist_ok=True)
-    with open(f'processed-output multi threading/{index+1}processed.txt',"w") as f:
+    os.makedirs('processed-output multi_threading', exist_ok=True)
+    with open(f'processed-output multi_threading/{index+1}processed.txt',"w") as f:
         f.write(uppertext)
 def multithread_file(text,num):
     chunkz=read(text)
