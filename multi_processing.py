@@ -12,8 +12,8 @@ def read(text):
 def capitale(args):
     index,text=args
     uppertext=text.upper()
-    os.makedirs('processed-output multi processing', exist_ok=True)
-    with open(f'processed-output multi processing/{index+1}processed.txt',"w") as f:
+    os.makedirs('processed-output multi_processing', exist_ok=True)
+    with open(f'processed-output multi_processing/{index+1}processed.txt',"w") as f:
         f.write(uppertext)
 
 def multiprocess_file(text,num):
